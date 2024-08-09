@@ -14,7 +14,7 @@ These 3 instances are provisioned on the Ansible Control Node with a local conne
 
 **PREREQUISITES:**
 
-On Control Node, install:
+On your Control Node, install:
 - Ansible
   
 - Boto3
@@ -31,7 +31,7 @@ On Control Node, install:
 
 3. Create an access key and a secret access key and store safely.
 
-4. Setup Vault - Create password for vault with the vault command. Edit your pass.yaml file and store your AWS sensitive credentials in there.
+4. On your IDE, setup Vault - Create password for vault with the vault command. Edit your pass.yaml file and store your AWS sensitive credentials in there.
 
 5. Create a playbook - Copy an EC2 module from Ansible's documentation or Ansible Galaxy. Ensure EC2 playbook has at least 1 distribution. Ensure the host is set to local host, since we want to provision an Ansible module as copped from Ansible Galaxy. Also ensure the connection is set to local, since the provisioning is done on the control node at first.
 
@@ -61,7 +61,7 @@ In this case, the SSH Copy ID method will be used.
 4. Run SSH passwordless authentication for all 3 instances - one at a time.
 ssh-copy-id -f "-o IdentityFile ~/Path/File" nameofinstance@PublicIPofInstance
 
-5. Verify is rightly authenticated: _ssh name@PublicIP_
+5. Verify it is rightly authenticated: _ssh name@PublicIP_
 
 
 **TASK 3 - CONFIGURATION MANAGEMENT**
